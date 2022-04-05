@@ -1,0 +1,42 @@
+.containers>* {
+    display: flex;
+}
+
+.container>* {
+    background-color: red;
+    width: 7rem;
+    height: 2.5rem;
+    margin: 4px;
+}
+
+.first-container {
+    flex-wrap: wrap;
+}
+
+.second-container {
+    justify-content: center;
+}
+
+.third-container {
+    flex-wrap: wrap;
+}
+
+.third-container>* {
+    background-color: blue;
+    width: 18%;
+    height: 4.5rem;
+}
+
+.fourth-container>*:first-child {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.fourth-container>*:not(:first-child) {
+    width: 15%;
+}
+
+.fifth-container {
+    justify-content: end;
+}
