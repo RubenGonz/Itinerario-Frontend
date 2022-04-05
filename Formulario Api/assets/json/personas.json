@@ -1,0 +1,30 @@
+{
+    "personas": [
+        {
+            "Id": 1,
+            "Usuario": "Bosonit user",
+            "Apellidos": "Bosonit surname",
+            "Contrasenia": "123456",
+            "Email-compania": "bosonit.bosonit@bosonit.com",
+            "Email-personal": "bosonit@gmail.com",
+            "Ciudad": "Logronio",
+            "Activo": true,
+            "Fecha-creacion": "2022-03-02",
+            "Url-imgagen": "https://bosonit.com/n-content/uploads/2021/12/bosonit_web.png",
+            "Fecha-finalizacion": "2022-03-05"
+        },
+        {
+            "Id": 2,
+            "Usuario": "Ruben",
+            "Apellidos": "Gonzalez",
+            "Contrasenia": "123456",
+            "Email-compania": "ruben.gonzalez@bosonit.com",
+            "Email-personal": "romenpdpl@gmail.com",
+            "Ciudad": "Buenavista del Norte",
+            "Activo": false,
+            "Fecha-creacion": "2022-03-02",
+            "Url-imgagen": "https://bosonit.com/n-content/uploads/2021/12/bosonit_web.png",
+            "Fecha-finalizacion": "2022-03-05"
+        }
+    ]
+}
