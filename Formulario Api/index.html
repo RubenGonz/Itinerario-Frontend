@@ -11,59 +11,76 @@
 
 <body>
     <h1>Personas</h1>
-    <h3>A continuación inserte sus datos</h3>
-    <form action="#" class="formulario">
-        <div class="form-field">
-            <label for="usuario">Usuario</label>
-            <input type="text" id="usuario">
+    <main>
+        <div id="firstPersonContainer">
+            <div class="imgContainer"><img id="imgProfile" src="" alt=""></div>
+            <h3 id="personUserName">Nombre usuario</h3>
+            <h4 id="personUserSurname">Nombre usuario</h4>
+            <div><b>Email de la empresa: </b><span id="personCompanyEmail"></span></div>
+            <div><b>Email personal: </b><span id="personPersonalEmail"></span></div>
+            <div><b>Ciudad: </b><span id="personCity"></span></div>
+            <div><b>Actividad: </b><span id="personActive"></span></div>
+            <div><b>Fecha de creación: </b><span id="personCreationDate"></span></div>
+            <div><b>Fecha de finalizacion: </b><span id="personFinishDate"></span></div>
         </div>
-        <div class="form-field">
-            <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos">
+        <div>
+            <h3 id="encabezado-formulario">A continuación inserte sus datos</h3>
+            <form action="#" class="formulario">
+                <div class="form-field">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario">
+                </div>
+                <div class="form-field">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos">
+                </div>
+                <div class="form-field">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" id="contrasenia">
+                </div>
+                <div class="form-field">
+                    <label for="emailCompania">Correo de la empresa</label>
+                    <input type="email" id="emailCompania">
+                </div>
+                <div class="form-field">
+                    <label for="emailPersonal">Correo personal</label>
+                    <input type="email" id="emailPersonal">
+                </div>
+                <div class="form-field">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad">
+                </div>
+                <div class="form-field">
+                    <label for="activado">Activado</label>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="activado">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="fechaCreacion">Fecha de creación</label>
+                    <input type="date" id="fechaCreacion">
+                </div>
+                <div class="form-field">
+                    <label for="url-imagen">Url de la imagen</label>
+                    <input type="url" id="url-imagen">
+                </div>
+                <div class="form-field">
+                    <label for="fechaFinalizacion">Fecha de finalización</label>
+                    <input type="date" id="fechaFinalizacion">
+                </div>
+                <div class="form-submit-field">
+                    <div class="submit-container">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <div class="reset-container">
+                        <input type="reset" value="Limpiar">
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="form-field">
-            <label for="contrasenia">Contraseña</label>
-            <input type="password" id="contrasenia">
-        </div>
-        <div class="form-field">
-            <label for="email-compania">Correo de la empresa</label>
-            <input type="email" id="email-compania">
-        </div>
-        <div class="form-field">
-            <label for="email-personal">Correo personal</label>
-            <input type="email" id="email-personal">
-        </div>
-        <div class="form-field">
-            <label for="ciudad">Ciudad</label>
-            <input type="text" id="ciudad">
-        </div>
-        <div class="form-field">
-            <label for="activado">Activado</label>
-            <div class="checkbox-container">
-                <input type="checkbox" id="activado">
-            </div>
-        </div>
-        <div class="form-field">
-            <label for="fecha-creacion">Fecha de creación</label>
-            <input type="date" id="fecha-creacion">
-        </div>
-        <div class="form-field">
-            <label for="url-imagen">Url de la imagen</label>
-            <input type="url" id="url-imagen">
-        </div>
-        <div class="form-field">
-            <label for="fecha-finalizacion">Fecha de finalización</label>
-            <input type="date" id="fecha-finalizacion">
-        </div>
-        <div class="form-submit-field">
-            <div class="submit-container">
-                <input type="submit" value="Enviar">
-            </div>
-            <div class="reset-container">
-                <input type="reset" value="Limpiar">
-            </div>
-        </div>
-    </form>
+    </main>
+    <script src="./assets/js/classes/Persona.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
