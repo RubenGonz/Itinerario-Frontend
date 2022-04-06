@@ -1,0 +1,44 @@
+body {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightblue;
+}
+
+.calculadora {
+    width: 200px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    background-color: gray;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+#pantalla {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: yellow;
+    border: 1px solid white;
+}
+
+.exp {
+    grid-column: 1/3;
+}
+
+.cero {
+   grid-column: 1/3; 
+}
