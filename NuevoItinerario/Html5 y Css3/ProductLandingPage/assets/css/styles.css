@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+}
+
+#header {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  background-color: rgb(206, 206, 206);
+  box-shadow: inset 0px -5px 5px 0px darkgray;
+  padding: 0.5rem 1rem;
+}
+#header > div {
+  display: flex;
+  align-items: center;
+}
+#header .header-img {
+  height: 100%;
+}
+#header .header-brand {
+  margin-left: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  font: "Courier New";
+  font-weight: bold;
+}
+#header ul {
+  display: flex;
+  list-style-type: none;
+}
+#header ul > li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#header ul > li:not(:last-child) {
+  border-right: 2px solid darkgray;
+}
+#header ul .nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+main > section {
+  min-height: 80vh;
+  box-shadow: inset 0px -5px 5px 0px darkgray;
+  padding: 3rem;
+}
+main #preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #A8D734;
+}
+main #preview > div {
+  width: 50vw;
+  max-width: 500px;
+}
+main #preview .preview-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+main #preview .preview-text > * {
+  text-align: center;
+}
+main #preview .preview-text .nombre-articulo {
+  display: flex;
+  justify-content: center;
+}
+main #preview .preview-text .small-text {
+  display: flex;
+  align-items: end;
+  font-size: 1rem;
+}
+main #preview .preview-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #preview .preview-img img {
+  max-height: 70vh;
+}
+main #caracteristicas {
+  background-color: #F4DEC0;
+}
+main #caracteristicas > h1 {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+main #caracteristicas #cards-caracteristicas {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main #caracteristicas #cards-caracteristicas > div {
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(142, 142, 142);
+  width: 20rem;
+  margin: 2rem 4rem;
+}
+main #caracteristicas #cards-caracteristicas > div .titulo-caracteristica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #caracteristicas #cards-caracteristicas > div .titulo-caracteristica img {
+  width: 4rem;
+  height: 4rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
