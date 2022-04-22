@@ -41,7 +41,7 @@ body {
   text-decoration: none;
 }
 
-main > section {
+main section {
   min-height: 80vh;
   box-shadow: inset 0px -5px 5px 0px darkgray;
   padding: 3rem;
@@ -98,21 +98,74 @@ main #caracteristicas #cards-caracteristicas {
   align-items: center;
   flex-wrap: wrap;
 }
-main #caracteristicas #cards-caracteristicas > div {
+main #caracteristicas #cards-caracteristicas .card {
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0px 0px 5px 0px rgb(142, 142, 142);
   width: 20rem;
   margin: 2rem 4rem;
 }
-main #caracteristicas #cards-caracteristicas > div .titulo-caracteristica {
+main #caracteristicas #cards-caracteristicas .card .titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main #caracteristicas #cards-caracteristicas > div .titulo-caracteristica img {
+main #caracteristicas #cards-caracteristicas .card .titulo img {
   width: 4rem;
   height: 4rem;
+}
+main #modelos {
+  background-color: #C5BBE8;
+}
+main #modelos > h1 {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+main #modelos #cards-modelos {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main #modelos #cards-modelos a {
+  color: black;
+  text-decoration: none;
+}
+main #modelos #cards-modelos .card {
+  transition: 0.3s;
+  display: flex;
+  min-height: 20rem;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(142, 142, 142);
+  margin: 2rem 4rem;
+}
+main #modelos #cards-modelos .card:hover {
+  background: #bcb3df;
+  box-shadow: 0px 0px 15px 0px rgb(142, 142, 142);
+}
+main #modelos #cards-modelos .card .imgModelo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2.5rem;
+  border-right: 2px solid lightgray;
+}
+main #modelos #cards-modelos .card .imgModelo img {
+  width: 15rem;
+}
+main #modelos #cards-modelos .card .info-modelo {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  justify-content: space-around;
+}
+main #modelos #cards-modelos .card .info-modelo h4 {
+  margin-bottom: 0.5rem;
+}
+main #modelos #cards-modelos .card .info-modelo ul {
+  margin-top: 0;
+  list-style: inside;
 }
 
 /*# sourceMappingURL=styles.css.map */
