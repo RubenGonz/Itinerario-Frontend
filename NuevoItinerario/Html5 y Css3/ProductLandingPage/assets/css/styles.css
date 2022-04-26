@@ -25,18 +25,22 @@ body {
   font: "Courier New";
   font-weight: bold;
 }
-#header ul {
+#header #nav-bar {
+  display: flex;
+  align-items: center;
+}
+#header #nav-bar ul {
   display: flex;
   list-style-type: none;
 }
-#header ul > li {
+#header #nav-bar ul > li {
   padding-left: 20px;
   padding-right: 20px;
 }
-#header ul > li:not(:last-child) {
+#header #nav-bar ul > li:not(:last-child) {
   border-right: 2px solid darkgray;
 }
-#header ul .nav-link {
+#header #nav-bar ul .nav-link {
   color: black;
   text-decoration: none;
 }
@@ -140,8 +144,9 @@ main #modelos #cards-modelos {
 main #modelos #cards-modelos a {
   color: black;
   text-decoration: none;
+  margin: 2rem 4rem;
 }
-main #modelos #cards-modelos .card {
+main #modelos #cards-modelos a .card {
   transition: 0.3s;
   display: flex;
   flex-wrap: wrap;
@@ -150,21 +155,20 @@ main #modelos #cards-modelos .card {
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0px 0px 5px 0px rgb(142, 142, 142);
-  margin: 2rem 4rem;
 }
-main #modelos #cards-modelos .card:hover {
+main #modelos #cards-modelos a .card:hover {
   background: #bcb3df;
   box-shadow: 0px 0px 15px 0px rgb(142, 142, 142);
 }
-main #modelos #cards-modelos .card .imgModelo {
+main #modelos #cards-modelos a .card .imgModelo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main #modelos #cards-modelos .card .imgModelo img {
+main #modelos #cards-modelos a .card .imgModelo img {
   width: 15rem;
 }
-main #modelos #cards-modelos .card .info-modelo {
+main #modelos #cards-modelos a .card .info-modelo {
   display: flex;
   flex-flow: row wrap;
   padding-left: 2.5rem;
@@ -172,13 +176,13 @@ main #modelos #cards-modelos .card .info-modelo {
   justify-content: center;
   max-width: 600px;
 }
-main #modelos #cards-modelos .card .info-modelo > div {
+main #modelos #cards-modelos a .card .info-modelo > div {
   margin-right: 3rem;
 }
-main #modelos #cards-modelos .card .info-modelo h4 {
+main #modelos #cards-modelos a .card .info-modelo h4 {
   margin-bottom: 0.5rem;
 }
-main #modelos #cards-modelos .card .info-modelo ul {
+main #modelos #cards-modelos a .card .info-modelo ul {
   margin-top: 0;
   list-style: inside;
 }
@@ -209,31 +213,46 @@ main #preguntas .pregunta-container:not(:last-child) {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-#footer .socialMediaBar,
-#footer .ayudaUsuario {
+#footer .informacionPagina > * {
+  margin-top: 25px;
+}
+#footer .informacionPagina .socialMediaBar,
+#footer .informacionPagina .ayudaUsuario {
   list-style-type: none;
 }
-#footer .socialMediaBar li {
+#footer .informacionPagina .socialMediaBar li {
   display: flex;
   align-items: center;
 }
-#footer .socialMediaBar li > * {
+#footer .informacionPagina .socialMediaBar li > * {
   margin: 5px;
 }
-#footer .socialMediaBar img {
+#footer .informacionPagina .socialMediaBar img {
   height: 2rem;
 }
-#footer .ayudaUsuario {
+#footer .informacionPagina .ayudaUsuario {
   padding-left: 0;
 }
-#footer .ayudaUsuario li {
+#footer .informacionPagina .ayudaUsuario li {
   margin: 10px;
 }
-#footer a:link,
-#footer a:hover,
-#footer a:visited {
+#footer .informacionPagina a:link,
+#footer .informacionPagina a:hover,
+#footer .informacionPagina a:visited {
   color: black;
   text-decoration: none;
+}
+#footer .informacionPagina .feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .informacionPagina .feedback #form {
+  display: flex;
+  flex-direction: column;
+}
+#footer .informacionPagina .feedback #form > * {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 600px) {
