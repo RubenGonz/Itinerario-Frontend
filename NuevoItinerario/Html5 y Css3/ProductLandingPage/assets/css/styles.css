@@ -83,6 +83,16 @@ main #preview .preview-img {
 main #preview .preview-img img {
   max-height: 70vh;
 }
+main #preview-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  min-height: auto;
+}
+main #preview-video video {
+  width: 100%;
+}
 main #caracteristicas {
   background-color: #F4DEC0;
 }
@@ -134,6 +144,8 @@ main #modelos #cards-modelos a {
 main #modelos #cards-modelos .card {
   transition: 0.3s;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   min-height: 20rem;
   border-radius: 5px;
   padding: 20px;
@@ -146,19 +158,22 @@ main #modelos #cards-modelos .card:hover {
 }
 main #modelos #cards-modelos .card .imgModelo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-right: 2.5rem;
-  border-right: 2px solid lightgray;
 }
 main #modelos #cards-modelos .card .imgModelo img {
   width: 15rem;
 }
 main #modelos #cards-modelos .card .info-modelo {
   display: flex;
-  flex-flow: column wrap;
-  height: 100%;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  padding-left: 2.5rem;
+  border-left: 2px solid lightgray;
+  justify-content: center;
+  max-width: 600px;
+}
+main #modelos #cards-modelos .card .info-modelo > div {
+  margin-right: 3rem;
 }
 main #modelos #cards-modelos .card .info-modelo h4 {
   margin-bottom: 0.5rem;
@@ -166,6 +181,88 @@ main #modelos #cards-modelos .card .info-modelo h4 {
 main #modelos #cards-modelos .card .info-modelo ul {
   margin-top: 0;
   list-style: inside;
+}
+main #preguntas {
+  background-color: rgb(228, 228, 228);
+}
+main #preguntas > h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+main #preguntas .pregunta-container > *:not(h3) {
+  margin-left: 3rem;
+}
+main #preguntas .pregunta-container:not(:last-child) {
+  border-bottom: 1px solid lightgray;
+}
+
+#footer {
+  background-color: rgb(206, 206, 206);
+  padding-top: 2rem;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-bottom: 3rem;
+  box-shadow: 0px -10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+#footer .informacionPagina {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#footer .socialMediaBar,
+#footer .ayudaUsuario {
+  list-style-type: none;
+}
+#footer .socialMediaBar li {
+  display: flex;
+  align-items: center;
+}
+#footer .socialMediaBar li > * {
+  margin: 5px;
+}
+#footer .socialMediaBar img {
+  height: 2rem;
+}
+#footer .ayudaUsuario {
+  padding-left: 0;
+}
+#footer .ayudaUsuario li {
+  margin: 10px;
+}
+#footer a:link,
+#footer a:hover,
+#footer a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    padding: 0.5rem;
+  }
+  #header .header-brand {
+    display: none;
+    margin-left: 0;
+  }
+  #header ul {
+    margin-top: 0;
+    padding-right: 0;
+    align-items: center;
+  }
+  #header ul > li {
+    margin: 0;
+    padding: 0 0.5rem;
+  }
+  #header ul > li:not(:last-child) {
+    border-right: 1px solid gray;
+  }
+}
+@media screen and (max-width: 750px) {
+  main #modelos #cards-modelos .card .info-modelo {
+    padding-left: 0;
+    border: none;
+    font-size: 0.7rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
