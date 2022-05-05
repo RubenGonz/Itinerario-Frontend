@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='author' content='Ruben Gonzalez Rodriguez'>
+    <title>Counter</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <div class="principal-card">
+        <div id="number">0</div>
+        <div class="controller-container">
+            <div>
+                <div>Setup</div>
+                <div class="buttons-container">
+                    <button id="start">Start</button>
+                    <button id="pause">Pause</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+            <div>
+                <div>Count</div>
+                <div class="buttons-container">
+                    <button id="count-up">Count up</button>
+                    <button id="count-down">Count down</button>
+                </div>
+            </div>
+            <div>
+                <div>Set-to</div>
+                <div class="input-container">
+                    <input type="number"id="set-to">
+                </div>
+            </div>
+            <div>
+                <div>Step</div>
+                <div class="input-container">
+                    <input type="number" id="step">
+                </div>
+            </div>
+            <div>
+                <div>Time gap in seconds</div>
+                <div class="input-container">
+                    <input type="number" id="time-gap">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/classes/counter.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

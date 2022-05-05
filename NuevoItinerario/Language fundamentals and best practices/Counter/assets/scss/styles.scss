@@ -1,0 +1,40 @@
+$body-bg-color: lightblue;
+$card-bg-color: lighten($body-bg-color, 10%);
+$card-border-color: rgb(99, 99, 255);
+$card-shadow-color: rgba(darken($card-border-color, 40%), 0.2);
+
+body {
+    background-color: $body-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.principal-card {
+    background: $card-bg-color;
+    border: 1px solid $card-border-color;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 2px $card-shadow-color;
+    padding: 1.5rem;
+
+    #number {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .controller-container {
+        &>div {
+            margin-top: 15px;
+
+            &>div:nth-of-type(1) {
+                font-weight: bold;
+            }
+
+            .buttons-container {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
