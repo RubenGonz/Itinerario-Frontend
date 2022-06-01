@@ -1,0 +1,13 @@
+$primary-color: rgb(103, 156, 255);
+$secundary-color: lighten($primary-color, 25%);
+
+$content-bg-color: lightblue;
+$card-bg-color: $secundary-color;
+$card-border-color: $primary-color;
+$card-shadow-color: rgba(darken($card-border-color, 40%), 0.2);
+
+*,
+::after,
+::before {
+    box-sizing: content-box;
+}

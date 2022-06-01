@@ -1,0 +1,43 @@
+<main class="counter">
+    <div class="counter-card">
+        <div class="number">{{actualNumber}}</div>
+        <div class="controller-container">
+            <div>
+                <div>Setup</div>
+                <div class="buttons-container">
+                    <button (click)="startCount()">Start</button>
+                    <button (click)="pauseCount()">Pause</button>
+                    <button (click)="resetCount()">Reset</button>
+                </div>
+            </div>
+            <div>
+                <div>Count</div>
+                <div class="buttons-container">
+                    <button (click)="countUp()">Count up</button>
+                    <button (click)="countDown()">Count down</button>
+                </div>
+            </div>
+            <div>
+                <div>Set-to</div>
+                <div class="input-container">
+                    <input #setSNumberInput type="number" placeholder="0" 
+                        (keyup)="getNumber(setSNumberInput.value)">
+                </div>
+            </div>
+            <div>
+                <div>Step</div>
+                <div class="input-container">
+                    <input #setStepInput type="number" placeholder={{step}} 
+                        (keyup)="getStep(setStepInput.value)">
+                </div>
+            </div>
+            <div>
+                <div>Time gap in seconds</div>
+                <div class="input-container">
+                    <input #setTimeGapInput type="number" placeholder="{{timeGap | toSeconds}}"
+                        (keyup)="getTimeGap(setTimeGapInput.value)">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

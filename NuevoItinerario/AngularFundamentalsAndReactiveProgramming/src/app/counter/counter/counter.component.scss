@@ -1,0 +1,56 @@
+@import "../../../styles.scss";
+
+main.counter {
+    background-color: $content-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.counter-card {
+    background: $card-bg-color;
+    border: 1px solid $card-border-color;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 2px $card-shadow-color;
+    padding: 1.5rem;
+    margin: 20px;
+
+    .number {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .controller-container {
+        &>div {
+            margin-top: 15px;
+
+            &>div:nth-of-type(1) {
+                font-weight: bold;
+            }
+
+            .buttons-container {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    border: 2px solid $card-border-color;
+                    border-radius: 5px;
+                    background: $content-bg-color;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background: $primary-color;
+                    }
+                }
+            }
+
+            .input-container {
+                input {
+                    border: 2px solid $card-border-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

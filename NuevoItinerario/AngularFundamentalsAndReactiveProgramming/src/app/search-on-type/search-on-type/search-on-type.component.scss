@@ -1,0 +1,63 @@
+@import "../../../styles.scss";
+
+$body-bg-color: lightblue;
+$results-bg-color: lighten($body-bg-color, 10%);
+$results-border-color: rgb(99, 99, 255);
+$results-shadow-color: rgba(darken($results-border-color, 40%), 0.2);
+
+main.searchOnType {
+    background-color: $content-bg-color;
+    padding: 1rem;
+
+    .search-pane {
+        display: flex;
+
+        .countries {
+            &>button {
+                padding: 9px;
+                background: blue;
+                border: 1px solid white;
+                color: white;
+
+                &:nth-of-type(1) {
+                    border-radius: 1rem 0 0 1rem;
+                }
+            }
+
+            &>.active {
+                background: goldenrod;
+            }
+        }
+
+        .search-text {
+            flex: 1 0;
+            border-radius: 0 1rem 1rem 0;
+            border: 1px solid white;
+        }
+    }
+
+    .results {
+        margin-top: 1rem;
+        background: $results-bg-color;
+        border: 1px solid $results-border-color;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 20px 2px $results-shadow-color;
+        padding: 1.5rem;
+
+        a {
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: block;
+            color: black;
+            text-decoration: none;
+            border: 1px solid rgb(78, 155, 255);
+            border-radius: 0.5rem;
+            transition: 0.3s;
+
+            &:hover {
+                background: darken($results-bg-color, 10%);
+            }
+        }
+    }
+}

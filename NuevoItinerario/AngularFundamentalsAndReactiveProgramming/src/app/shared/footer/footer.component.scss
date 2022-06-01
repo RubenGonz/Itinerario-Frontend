@@ -1,0 +1,18 @@
+@import "../../../styles.scss";
+
+footer {
+    background: linear-gradient(to top, $primary-color, $secundary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid $primary-color;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}

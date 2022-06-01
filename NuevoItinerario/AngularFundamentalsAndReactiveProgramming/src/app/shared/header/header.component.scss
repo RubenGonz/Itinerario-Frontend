@@ -1,0 +1,24 @@
+@import "../../../styles.scss";
+
+header {
+    height: 2rem;
+    background: linear-gradient(to bottom, $primary-color, $secundary-color);
+    border-bottom: 2px solid $primary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    div {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 100%;
+            box-sizing: content-box;
+        }
+    }
+
+    h2 {
+        margin: 0;
+    }
+}

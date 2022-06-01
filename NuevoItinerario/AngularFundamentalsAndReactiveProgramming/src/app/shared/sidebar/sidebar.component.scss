@@ -1,0 +1,27 @@
+@import "../../../styles.scss";
+
+nav {
+    height: 100%;
+    background: linear-gradient(to right, $primary-color, $secundary-color);
+    border-right: 2px solid $primary-color;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0;
+            padding: 10px;
+            border-bottom: 1px solid gray;
+
+            &.active-link {
+                background: $secundary-color;
+            }
+
+            &:hover {
+                background: $secundary-color;
+            }
+        }
+    }
+}
