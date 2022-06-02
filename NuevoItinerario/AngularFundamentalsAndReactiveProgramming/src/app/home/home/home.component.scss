@@ -1,12 +1,11 @@
 @import "../../../styles.scss";
 
 main.home {
-    height: 100%;
+    @include mainBasicStyle();
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: $content-bg-color;
 
     img {
         width: 200px;

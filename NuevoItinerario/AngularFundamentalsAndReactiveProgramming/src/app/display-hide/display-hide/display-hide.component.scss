@@ -1,40 +1,17 @@
 @import "../../../styles.scss";
 
 main.display-hide {
-    background-color: $content-bg-color;
+    @include mainBasicStyle();
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: 100%;
 
     button {
-        padding: 9px;
-        background: blue;
-        border: 1px solid white;
-        color: white;
-        border-radius: 1rem;
-        transition: 0.5s;
-
-        &:hover {
-            background: rgb(221, 191, 115);
-        }
-
-        &.active {
-            background: goldenrod;
-
-            &:hover {
-                background: rgb(221, 191, 115);
-            }
-        }
+        @include buttonsStyle();
     }
 
     .textContainer {
-        background: $card-bg-color;
-        border: 1px solid $card-border-color;
-        border-radius: 1rem;
-        box-shadow: 0px 0px 20px 2px $card-shadow-color;
-        padding: 1.5rem;
-        margin: 20px;
+        @include cardStyle();
     }
 }
