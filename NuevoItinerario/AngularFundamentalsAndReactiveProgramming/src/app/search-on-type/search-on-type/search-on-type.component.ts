@@ -10,6 +10,7 @@ import { SearchService } from '../services/search.service';
 })
 export class SearchOnTypeComponent implements OnInit {
 
+  //Variables
   selectedCountry: string = "";
   typeText: string = "";
   universities: UniversityInterface[] = [];
@@ -22,18 +23,34 @@ export class SearchOnTypeComponent implements OnInit {
     { id: "Turkey", name: "Turkia" }
   ];
 
+  /**
+   * Constructor del componente
+   * @param searchService  servicio encargado de realizar las busquedas
+   */
   constructor(private searchService: SearchService) { }
 
+  /**
+   * Al cargar se selcciona el primer pais y 
+   * se realiza una busqueda
+   */
   ngOnInit(): void {
     this.selectedCountry = this.COUNTRIES[0].id;
     this.getUniversities();
   }
 
+  /**
+   * Metodo que a través del servicio realiza una busqueda en la api
+   */
   getUniversities() {
     this.searchService.getUniversities(this.selectedCountry, this.typeText)
       .subscribe(universitiesApi => this.universities = universitiesApi);
   }
 
+  /**
+   * Metodo que cambia la variable selectedCountry 
+   * y realiza una busqueda posteriormente
+   * @param country pais al que se cambia
+   */
   changeCountry(country: string) {
     this.selectedCountry = country;
     this.getUniversities();
