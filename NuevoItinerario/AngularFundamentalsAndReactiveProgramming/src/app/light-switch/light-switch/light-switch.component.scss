@@ -35,6 +35,7 @@ main.light-switch {
                     height: $light-size;
                     border-radius: $light-size/2;
                     margin: 1rem 0.75rem;
+                    transition: 0.75s;
                 }
 
                 $colors: red,
