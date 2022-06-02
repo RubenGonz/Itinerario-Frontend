@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CounterComponent } from './counter/counter/counter.component';
 import { DisplayHideComponent } from './display-hide/display-hide/display-hide.component';
 import { HomeComponent } from './home/home/home.component';
+import { LightSwitchComponent } from './light-switch/light-switch/light-switch.component';
 import { SearchOnTypeComponent } from './search-on-type/search-on-type/search-on-type.component';
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: "component_communication", component: HomeComponent },
   { path: "crud", component: HomeComponent },
   { path: "search_on_type", component: SearchOnTypeComponent },
-  { path: "light_switch", component: HomeComponent },
+  { path: "light_switch", component: LightSwitchComponent },
   { path: "external_libreries", component: HomeComponent },
   { path: "counter", component: CounterComponent },
   { path: "**", redirectTo:"" }

@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { CounterModule } from './counter/counter.module';
 import { SearchOnTypeModule } from './search-on-type/search-on-type.module';
 import { DisplayHideModule } from './display-hide/display-hide.module';
+import { LightSwitchModule } from './light-switch/light-switch.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DisplayHideModule } from './display-hide/display-hide.module';
     NgbModule,
     CounterModule,
     SearchOnTypeModule,
-    DisplayHideModule
+    DisplayHideModule,
+    LightSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

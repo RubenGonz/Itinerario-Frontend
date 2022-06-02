@@ -1,0 +1,30 @@
+<main class="light-switch">
+    <h1>Semáforo</h1>
+    <div>
+        <div class="lights-container">
+            <div class="lights">
+                <div *ngFor="let color of colours" class="light light-{{color}}"
+                    [ngClass]="{'light-on' : (colorOn == color && lightSwitchOn)}">
+                </div>
+            </div>
+            <div class="lights-stick"></div>
+        </div>
+        <div class="controller-container">
+            <div>
+                <button *ngIf="!lightSwitchOn" (click)="turnOnLightSwitch()">Encender semáforo</button>
+                <button *ngIf="lightSwitchOn" (click)="turnOffLightSwitch()" class="active">Apagar semáforo</button>
+            </div>
+            <div class="controller-card" *ngIf="lightSwitchOn">
+                <h2>Controlador</h2>
+                <select [(ngModel)]="colorOn">
+                    <option *ngFor="let color of colours" value="{{color}}">{{color}}</option>
+                </select>
+                <div>
+                    <button *ngIf="!automaticMode" (click)="startAutomaticMode()">Empezar modo automático</button>
+                    <button *ngIf="automaticMode" (click)="stopAutomaticMode()" class="active">Parar modo
+                        automático</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
