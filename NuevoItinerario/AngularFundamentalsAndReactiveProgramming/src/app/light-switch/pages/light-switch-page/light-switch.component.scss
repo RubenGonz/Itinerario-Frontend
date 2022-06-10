@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../../../styles.scss";
 
 main.light-switch {
     @include mainBasicStyle();
@@ -12,80 +12,5 @@ main.light-switch {
     &>div {
         display: flex;
         flex-wrap: wrap;
-
-        .lights-container {
-            width: 50%;
-            min-width: 200px;
-            min-height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            $lights-bg: rgb(63, 63, 63);
-
-            .lights {
-                display: block;
-                background: $lights-bg;
-                padding: 0.5rem;
-                border-radius: 1rem;
-
-                .light {
-                    $light-size: 5rem;
-                    width: $light-size;
-                    height: $light-size;
-                    border-radius: $light-size/2;
-                    margin: 1rem 0.75rem;
-                    transition: 0.75s;
-                }
-
-                $colors: red,
-                orange,
-                lightgreen;
-
-                @each $color in $colors {
-                    .light {
-                        &-#{$color} {
-                            background: darken($color, 15%);
-
-                            &.light-on {
-                                background: lighten($color, 15%);
-                                box-shadow: 0px 0px 5px 5px lighten($color, 15%);
-                            }
-                        }
-                    }
-                }
-            }
-
-            .lights-stick {
-                background: black;
-                width: 1.5rem;
-                height: 5rem;
-                border-radius: 0rem 0rem 1rem 1rem;
-            }
-        }
-
-        .controller-container {
-            width: 50%;
-            min-width: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            .controller-card {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                @include cardStyle();
-
-                select {
-                    @include selectStyle();
-                }
-            }
-
-            button {
-                @include buttonsStyle();
-            }
-        }
     }
 }

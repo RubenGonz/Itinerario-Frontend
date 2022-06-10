@@ -1,0 +1,25 @@
+@import "../../../../styles.scss";
+
+.controller-container {
+    width: 50%;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .controller-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include cardStyle();
+
+        select {
+            @include selectStyle();
+        }
+    }
+
+    button {
+        @include buttonsStyle();
+    }
+}

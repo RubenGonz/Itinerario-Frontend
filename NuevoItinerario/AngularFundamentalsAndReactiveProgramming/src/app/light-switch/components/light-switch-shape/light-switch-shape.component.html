@@ -1,0 +1,8 @@
+<div class="lights-container">
+    <div class="lights">
+        <div *ngFor="let color of COLOURS" class="light light-{{color}}"
+            [ngClass]="{'light-on' : (activeColor == color && power)}">
+        </div>
+    </div>
+    <div class="lights-stick"></div>
+</div>

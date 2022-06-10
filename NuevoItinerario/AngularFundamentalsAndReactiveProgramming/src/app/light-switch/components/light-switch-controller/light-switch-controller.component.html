@@ -1,0 +1,17 @@
+<div class="controller-container">
+    <div>
+        <button *ngIf="!power" (click)="turnOnLightSwitch()">Encender semáforo</button>
+        <button *ngIf="power" (click)="turnOffLightSwitch()" class="active">Apagar semáforo</button>
+    </div>
+    <div class="controller-card" *ngIf="power">
+        <h2>Controlador</h2>
+        <select [ngModel]="activeColor" #select (change)="changeColor(select.value)">
+            <option *ngFor="let color of COLOURS" [value]="color">{{color}}</option>
+        </select>
+        <div>
+            <button *ngIf="!automaticMode" (click)="startAutomaticMode()">Empezar modo automático</button>
+            <button *ngIf="automaticMode" (click)="stopAutomaticMode()" class="active">Parar modo
+                automático</button>
+        </div>
+    </div>
+</div>
