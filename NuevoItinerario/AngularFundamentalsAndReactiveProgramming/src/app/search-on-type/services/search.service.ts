@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { University, UniversityInterface } from '../interfaces/university';
 
 @Injectable({
@@ -8,30 +8,22 @@ import { University, UniversityInterface } from '../interfaces/university';
 })
 export class SearchService {
 
-  /**
-   * Constructor del servicio
-   * @param http servicio que hara las llamadas a http
-   */
+  private apiUrl: string = "http://universities.hipolabs.com";
+
   constructor(private http: HttpClient) { }
 
-  /**
-   * Funcion que llama a una api a traves de una url 
-   * usando variables y devuelve una lista de 
-   * universidades que coinciden
-   * @param country pais de la universidad
-   * @param name nombre de la universidad
-   * @returns array de universidades
-   */
   getUniversities(country: string, name: string): Observable<UniversityInterface[]> {
-    let universitiesMatched: UniversityInterface[] = [];
-    return this.http.get("http://universities.hipolabs.com/search?country=" + country).pipe(
+    const params = new HttpParams().set("country", country);
+    let universities: UniversityInterface[] = [];
+
+    return this.http.get(this.apiUrl + "/search", { params }).pipe(
       map(universitiesApi => {
         Object.values(universitiesApi).forEach(universityApi => {
           if (universityApi.name.toLowerCase().includes(name.toLowerCase())) {
-            universitiesMatched.push(new University(universityApi.name, universityApi.web_pages[0]));
+            universities.push(new University(universityApi.name, universityApi.web_pages[0]));
           }
         })
-        return universitiesMatched;
+        return universities;
       })
     )
   }

@@ -1,0 +1,30 @@
+@import "../../../../styles.scss";
+
+.emptyResults {
+    @include cardStyle();
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
+.results {
+    @include cardStyle();
+    margin-left: 0;
+    margin-right: 0;
+
+    a {
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: block;
+        color: black;
+        text-decoration: none;
+        border: 1px solid $primary-color;
+        border-radius: 0.5rem;
+        transition: 0.3s;
+
+        &:hover {
+            background: darken($secundary-color, 10%);
+        }
+    }
+}

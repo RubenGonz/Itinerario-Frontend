@@ -1,0 +1,27 @@
+@import "../../../../styles.scss";
+
+.search-pane {
+    display: flex;
+
+    .countries {
+        &>button {
+            @include buttonsStyle();
+            border-radius: 0;
+            margin: 0;
+
+            &:nth-of-type(1) {
+                border-radius: 1rem 0 0 1rem;
+            }
+        }
+
+        &>.active {
+            background: goldenrod;
+        }
+    }
+
+    input {
+        flex: 1 0;
+        border-radius: 0 1rem 1rem 0;
+        border: 1px solid white;
+    }
+}

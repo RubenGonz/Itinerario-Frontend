@@ -1,0 +1,7 @@
+<div class="search-pane">
+    <div class="countries">
+        <button *ngFor="let country of COUNTRIES" [ngClass]="{'active' : selectedCountry == country.id}"
+            (click)="changeCountry(country.id)" [id]="country.id">{{country.name}}</button>
+    </div>
+    <input [(ngModel)]="typeText" (keyup)="getUniversities()" type="text" placeholder="Nombre de la universidad aqui...">
+</div>

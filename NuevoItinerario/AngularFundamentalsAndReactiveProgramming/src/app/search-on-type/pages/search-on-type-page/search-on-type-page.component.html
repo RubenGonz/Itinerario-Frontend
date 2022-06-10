@@ -1,0 +1,6 @@
+<main class="searchOnType">
+    <h2 class="tittle">Buscador de Univeridades</h2>
+    <app-browser (onSearch)="setUniversities($event)"></app-browser>
+    <hr>
+    <app-results [universities]="universities"></app-results>
+</main>

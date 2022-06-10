@@ -1,0 +1,9 @@
+<div class="emptyResults" *ngIf="universities.length === 0; else results">
+    No hay resultados
+</div>
+
+<ng-template #results>
+    <div class="results">
+        <a *ngFor="let university of universities" [href]="university.url">{{university.name}}</a>
+    </div>
+</ng-template>

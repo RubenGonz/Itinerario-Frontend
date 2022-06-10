@@ -1,0 +1,6 @@
+@import "../../../../styles.scss";
+
+main.searchOnType {
+    @include mainBasicStyle();
+    padding: 1rem;
+}
