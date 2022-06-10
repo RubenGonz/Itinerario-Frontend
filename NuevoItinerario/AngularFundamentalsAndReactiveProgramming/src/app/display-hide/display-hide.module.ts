@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DisplayHideComponent } from './display-hide/display-hide.component';
-
+import { DisplayHidePageComponent } from './display-hide-page/display-hide-page.component';
 
 
 @NgModule({
   declarations: [
-    DisplayHideComponent
+    DisplayHidePageComponent
   ],
   imports: [
     CommonModule

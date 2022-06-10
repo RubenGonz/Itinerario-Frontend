@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-display-hide',
-  templateUrl: './display-hide.component.html',
-  styleUrls: ['./display-hide.component.scss']
+  templateUrl: './display-hide-page.component.html',
+  styleUrls: ['./display-hide-page.component.scss']
 })
-export class DisplayHideComponent {
+export class DisplayHidePageComponent {
 
   //Variables
   visibleContainer: boolean = false;

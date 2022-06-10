@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.scss']
+  templateUrl: './counter-page.component.html',
+  styleUrls: ['./counter-page.component.scss']
 })
 
-export class CounterComponent {
+export class CounterPageComponent {
 
   // Variables
   step: number = 1;

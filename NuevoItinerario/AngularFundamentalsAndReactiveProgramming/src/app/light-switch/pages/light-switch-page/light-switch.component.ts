@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './light-switch.component.html',
   styleUrls: ['./light-switch.component.scss']
 })
-export class LightSwitchComponent {
+export class LightSwitchPageComponent {
 
   //Variables
   colours: string[] = ["red", "orange", "lightgreen"];

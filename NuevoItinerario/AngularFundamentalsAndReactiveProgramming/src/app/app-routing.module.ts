@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CounterComponent } from './counter/counter/counter.component';
-import { DisplayHideComponent } from './display-hide/display-hide/display-hide.component';
-import { HomeComponent } from './home/home/home.component';
-import { LightSwitchComponent } from './light-switch/light-switch/light-switch.component';
-import { SearchOnTypeComponent } from './search-on-type/search-on-type/search-on-type.component';
+import { HomePageComponent } from './home/home-page/home-page.component';
+import { DisplayHidePageComponent } from './display-hide/display-hide-page/display-hide-page.component';
+import { SearchOnTypePageComponent } from './search-on-type/pages/search-on-type-page/search-on-type-page.component';
+import { LightSwitchPageComponent } from './light-switch/pages/light-switch-page/light-switch.component';
+import { ExternalLibreriesPageComponent } from './external-libreries/external-libreries-page/external-libreries-page.component';
+import { CounterPageComponent } from './counter/counter-page/counter-page.component';
 
 const routes: Routes = [
   { path: "", redirectTo:"home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
-  { path: "display_hide", component: DisplayHideComponent },
-  { path: "component_communication", component: HomeComponent },
-  { path: "crud", component: HomeComponent },
-  { path: "search_on_type", component: SearchOnTypeComponent },
-  { path: "light_switch", component: LightSwitchComponent },
-  { path: "external_libreries", component: HomeComponent },
-  { path: "counter", component: CounterComponent },
+  { path: "home", component: HomePageComponent },
+  { path: "display_hide", component: DisplayHidePageComponent },
+  { path: "component_communication", component: HomePageComponent },
+  { path: "crud", component: HomePageComponent },
+  { path: "search_on_type", component: SearchOnTypePageComponent },
+  { path: "light_switch", component: LightSwitchPageComponent },
+  { path: "external_libreries", component: ExternalLibreriesPageComponent },
+  { path: "counter", component: CounterPageComponent },
   { path: "**", redirectTo:"" }
 ];
 

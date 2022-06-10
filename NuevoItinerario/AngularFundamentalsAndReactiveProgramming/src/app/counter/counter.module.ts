@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CounterComponent } from './counter/counter.component';
+import { CounterPageComponent } from './counter-page/counter-page.component';
 import { ToSecondsPipe } from './pipes/to-seconds.pipe';
 
 
 
 @NgModule({
   declarations: [
-    CounterComponent,
+    CounterPageComponent,
     ToSecondsPipe
-  ],
-  exports: [
-    CounterComponent
   ],
   imports: [
     CommonModule

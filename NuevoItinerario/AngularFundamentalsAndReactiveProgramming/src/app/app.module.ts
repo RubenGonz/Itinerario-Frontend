@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
-import { CommonModule } from '@angular/common';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -12,6 +11,7 @@ import { CounterModule } from './counter/counter.module';
 import { SearchOnTypeModule } from './search-on-type/search-on-type.module';
 import { DisplayHideModule } from './display-hide/display-hide.module';
 import { LightSwitchModule } from './light-switch/light-switch.module';
+import { ExternalLibreriesModule } from './external-libreries/external-libreries.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { LightSwitchModule } from './light-switch/light-switch.module';
     CounterModule,
     SearchOnTypeModule,
     DisplayHideModule,
-    LightSwitchModule
+    LightSwitchModule,
+    ExternalLibreriesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

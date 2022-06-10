@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LightSwitchComponent } from './light-switch/light-switch.component';
 import { FormsModule } from '@angular/forms';
+import { LightSwitchPageComponent } from './pages/light-switch-page/light-switch.component';
 
 
 
 @NgModule({
   declarations: [
-    LightSwitchComponent
+    LightSwitchPageComponent
   ],
   imports: [
     CommonModule,
