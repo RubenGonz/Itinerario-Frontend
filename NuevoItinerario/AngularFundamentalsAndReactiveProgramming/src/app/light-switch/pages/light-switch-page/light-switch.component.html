@@ -1,12 +1,12 @@
 <main class="light-switch">
     <h1>Semáforo</h1>
     <div>
-        <app-light-switch-shape 
+        <app-light-switch-shape class="angular-component"
             [COLOURS]="COLOURS" 
             [activeColor]="activeColor" 
             [power]="power">
         </app-light-switch-shape>
-        <app-light-switch-controller 
+        <app-light-switch-controller class="angular-component"
             [COLOURS]="COLOURS"
             (onActiveColorChange)="activeColor = $event"
             (onPowerChange)="power = $event">

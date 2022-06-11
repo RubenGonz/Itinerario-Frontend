@@ -3,14 +3,21 @@
 main.light-switch {
     @include mainBasicStyle();
 
+    .angular-component {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+
     h1 {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        text-align: center;
+        @include tittleStyle();
     }
 
     &>div {
         display: flex;
         flex-wrap: wrap;
+        flex: 1 0;
     }
 }

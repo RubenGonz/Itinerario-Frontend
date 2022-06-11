@@ -2,15 +2,13 @@
 
 .emptyResults {
     @include cardStyle();
-    margin-left: 0;
-    margin-right: 0;
+    margin: 1rem;
     text-align: center;
 }
 
 .results {
     @include cardStyle();
-    margin-left: 0;
-    margin-right: 0;
+    margin: 1rem;
 
     a {
         padding: 5px;

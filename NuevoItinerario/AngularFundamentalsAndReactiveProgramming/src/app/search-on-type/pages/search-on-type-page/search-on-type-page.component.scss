@@ -2,5 +2,13 @@
 
 main.searchOnType {
     @include mainBasicStyle();
-    padding: 1rem;
+    padding: 0;
+    
+    .tittle{
+        @include tittleStyle();
+    }
+
+    hr {
+        margin: 1rem;
+    }
 }

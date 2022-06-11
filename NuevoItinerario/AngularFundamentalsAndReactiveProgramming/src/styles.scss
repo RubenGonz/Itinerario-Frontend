@@ -11,6 +11,11 @@ $card-shadow-color: rgba(darken($card-border-color, 40%), 0.2);
     background-color: $content-bg-color;
 }
 
+@mixin tittleStyle {
+    padding: 1rem;
+    text-align: center;
+}
+
 @mixin cardStyle {
     background: $card-bg-color;
     border: 1px solid $card-border-color;

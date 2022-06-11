@@ -7,11 +7,19 @@ main.display-hide {
     align-items: center;
     flex-direction: column;
 
+    h2 {
+        @include tittleStyle();
+    }
+
     button {
         @include buttonsStyle();
     }
 
     .textContainer {
         @include cardStyle();
+    }
+
+    .d-hidden {
+        visibility: hidden;
     }
 }

@@ -1,8 +1,9 @@
 <main class="display-hide">
+    <h2>Display hide</h2>
     <button (click)="toggleVision()" [ngClass]="{'active' : visibleContainer}">
         {{buttonText}}
     </button>
-    <div class="textContainer" *ngIf="visibleContainer">
+    <div class="textContainer" [ngClass]="{'d-hidden' : !visibleContainer}">
         Texto normalmente invisible
     </div>
 </main>

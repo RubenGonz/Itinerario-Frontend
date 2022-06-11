@@ -5,10 +5,16 @@ main.counter {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    @include tittleStyle();
 }
 
 .counter-card {
     @include cardStyle();
+    margin-top: 0;
 
     .number {
         font-size: 4rem;
