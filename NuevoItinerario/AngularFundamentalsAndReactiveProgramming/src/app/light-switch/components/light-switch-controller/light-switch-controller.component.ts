@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LightSwitchService } from '../../service/light-switch.service';
 
 @Component({
   selector: 'app-light-switch-controller',
@@ -7,53 +8,38 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class LightSwitchControllerComponent implements OnInit {
 
-  @Input() COLOURS!: string[];
-  @Output() onActiveColorChange: EventEmitter<string> = new EventEmitter();
-  @Output() onPowerChange: EventEmitter<boolean> = new EventEmitter();
+  COLOURS?: string[];
+  activeColor?: string;
+  power?: boolean;
+  automaticMode?: boolean;
 
-  activeColor: string = "red";
-  power: boolean = false;
+  constructor(private lightSwitchService: LightSwitchService) { }
 
-  automaticMode: boolean = false;
-
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.COLOURS = this.lightSwitchService.COLOURS;
+    this.lightSwitchService.activeColor.subscribe(activeColor => this.activeColor = activeColor);
+    this.lightSwitchService.power.subscribe(power => this.power = power);
+    this.lightSwitchService.automaticMode.subscribe(automaticMode => this.automaticMode = automaticMode);
   }
 
   changeColor(newColor: string) {
-    this.activeColor = newColor;
-    this.onActiveColorChange.emit(newColor);
-  }
-
-  changeToNextColor() {
-    let indice = this.COLOURS.indexOf(this.activeColor);
-    indice == (this.COLOURS.length - 1) ? this.changeColor(this.COLOURS[0]) : this.changeColor(this.COLOURS[indice + 1]);
+    this.lightSwitchService.changeColor(newColor);
   }
 
   startAutomaticMode() {
-    this.automaticMode = true
-    this.changeToNextColor();
-    setTimeout(() => {
-      if (this.automaticMode == true) {
-        this.startAutomaticMode();
-      }
-    }, 1500);
+    this.lightSwitchService.startAutomaticMode();
   }
 
   stopAutomaticMode() {
-    this.automaticMode = false;
+    this.lightSwitchService.stopAutomaticMode();
   }
 
   turnOnLightSwitch() {
-    this.power = true;
-    this.onPowerChange.emit(true);
+    this.lightSwitchService.turnOnLightSwitch();
   }
 
   turnOffLightSwitch() {
-    this.power = false;
-    this.onPowerChange.emit(false);
-    this.stopAutomaticMode();
+    this.lightSwitchService.turnOffLightSwitch();
   }
 
 }

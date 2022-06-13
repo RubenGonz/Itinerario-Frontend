@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class LightSwitchPageComponent {
 
-  COLOURS: string[] = ["red", "orange", "lightgreen"];
-  activeColor: string = "red";
-  power: boolean = false;
-
 }
