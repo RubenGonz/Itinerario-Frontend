@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { CountryInterface } from '../../interfaces/country';
-import { UniversityInterface } from '../../interfaces/university';
 
 @Component({
   selector: 'app-search-on-type',
@@ -9,9 +7,4 @@ import { UniversityInterface } from '../../interfaces/university';
 })
 export class SearchOnTypePageComponent {
 
-  universities: UniversityInterface[] = [];
-
-  setUniversities(universities: UniversityInterface[]) {
-    this.universities = universities;
-  }
 }

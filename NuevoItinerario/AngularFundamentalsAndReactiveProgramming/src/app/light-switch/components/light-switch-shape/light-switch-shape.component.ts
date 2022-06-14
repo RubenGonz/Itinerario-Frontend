@@ -8,12 +8,21 @@ import { LightSwitchService } from '../../service/light-switch.service';
 })
 export class LightSwitchShapeComponent implements OnInit {
 
+  //Variables
   COLOURS?: string[];
   activeColor?: string;
   power?: boolean;
 
+  /**
+   * Constructor que inicializa el servicio
+   * @param lightSwitchService servicio del semaforo
+   */
   constructor(private lightSwitchService: LightSwitchService) { }
   
+  /**
+   * Metodo que al inicializar el componente 
+   * obtiene los valores del servicio
+   */
   ngOnInit() {
     this.COLOURS = this.lightSwitchService.COLOURS;
     this.lightSwitchService.activeColor.subscribe(activeColor => this.activeColor = activeColor);
