@@ -12,6 +12,7 @@ import { SearchOnTypeModule } from './search-on-type/search-on-type.module';
 import { DisplayHideModule } from './display-hide/display-hide.module';
 import { LightSwitchModule } from './light-switch/light-switch.module';
 import { ExternalLibreriesModule } from './external-libreries/external-libreries.module';
+import { ComponentCommunicationModule } from './component-communication/component-communication.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ExternalLibreriesModule } from './external-libreries/external-libreries
     SearchOnTypeModule,
     DisplayHideModule,
     LightSwitchModule,
-    ExternalLibreriesModule
+    ExternalLibreriesModule,
+    ComponentCommunicationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

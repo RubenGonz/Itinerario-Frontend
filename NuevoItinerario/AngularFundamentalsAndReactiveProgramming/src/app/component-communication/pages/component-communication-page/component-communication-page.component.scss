@@ -1,0 +1,15 @@
+@import "../../../../styles.scss";
+
+main.component-communication {
+    @include mainBasicStyle();
+
+    h1 {
+        @include tittleStyle();
+    }
+
+    .center-card {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

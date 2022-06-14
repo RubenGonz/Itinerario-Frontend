@@ -1,0 +1,30 @@
+@import "../../../../styles.scss";
+
+.father-card {
+    @include cardStyle();
+    width: 75%;
+
+    h5 {
+        @include tittleStyle();
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        button {
+            @include buttonsStyle();
+        }
+    }
+
+    .center-card {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

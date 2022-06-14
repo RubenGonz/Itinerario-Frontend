@@ -1,0 +1,14 @@
+<div class="father-card">
+    <h3>Father component</h3>
+    <h5 [ngClass]="{'invisible' : messajeText == ''}">Mensaje recibido: {{messajeText}}</h5>
+    <div class="buttons-container">
+        <button (click)="emitServiceMessage()">Use service</button>
+        <button (click)="emitInputMessage()">Use Input property</button>
+        <button (click)="emitObservableMessage()">Use Observable</button>
+    </div>
+    <app-child-component 
+        class="center-card"
+        [setInputMessage]="parentInputMessage"
+        (onOutput)="changeMessage($event)">
+    </app-child-component>
+</div>
